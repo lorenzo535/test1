@@ -3,5 +3,9 @@
         <file>main.qml</file>
         <file>mainmulti.qml</file>
         <file>Screen.qml</file>
+        <file>PageSail.qml</file>
+        <file>PageMotor.qml</file>
+        <file>PageInfos.qml</file>
+        <file>PageDIO.qml</file>
     </qresource>
 </RCC>

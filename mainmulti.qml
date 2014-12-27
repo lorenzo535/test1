@@ -24,18 +24,21 @@ Rectangle {
             id: firstScreen
             title:"First Screen"
             color: "blue"
+            PageSail{}
         },
         Screen {
             parent: container
             id: secondScreen
             title:"Second Screen"
             color: "red"
+            PageMotor{}
         },
         Screen {
             parent: container
             id:thirdScreen
             title:"Third Screen"
             color:"green"
+            PageDIO{}
         },
         Screen {
             parent: container
@@ -43,6 +46,7 @@ Rectangle {
             id:fourthScreen
             title:"Fourth Screen"
             color:"orange"
+            PageInfos{}
         }
         ]
 
