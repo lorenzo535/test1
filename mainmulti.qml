@@ -35,23 +35,23 @@ Rectangle {
         Screen {
             parent: container
             id: secondScreen
-            title:"Second Screen"
-            color: "red"
+            title:""
+            color: appColors.nightBackground
             PageMotor{local_enable: parent.controls_enabled}
         },
         Screen {
             parent: container
             id:thirdScreen
-            title:"Third Screen"
-            color:"green"
+            title:""
+            color: appColors.nightBackground
             PageDIO{local_enable: parent.controls_enabled}            
         },
         Screen {
             parent: container
             //anchors.fill: parent
             id:fourthScreen
-            title:"Fourth Screen"
-            color:"orange"
+            title:""
+            color: appColors.nightBackground
             PageInfos{local_enable: parent.controls_enabled}
         }
         ]

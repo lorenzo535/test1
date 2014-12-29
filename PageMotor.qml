@@ -17,12 +17,12 @@ Item {
         Grid {
             columns: 2
             spacing: 4
-            Rectangle { color: "red"; width: 230; height: 230 }
-            Rectangle { color: "yellow"; width: 230; height: 230 }
-            Rectangle { color: "green"; width: 230; height: 230 }
-            Rectangle { color: "blue"; width: 230; height: 230 }
-            Rectangle { color: "white"; width: 230; height: 230 }
-            Rectangle { color: "pink"; width: 230; height: 230 }
+            DisplayElement { idAcronym: "TMP"; value: 75.2 }
+            DisplayElement { idAcronym: "TMP2"; value: 4.2 }
+            DisplayElement { idAcronym: "RPM"; value: 73.2 }
+            DisplayElement { idAcronym: "FUE"; value: 56.7 }
+            DisplayElement { idAcronym: "HRS"; value: 5.2 }
+            DisplayElement { idAcronym: "TRP"; value: 23.2 }
 
         }
 
