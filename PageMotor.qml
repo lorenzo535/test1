@@ -1,25 +1,30 @@
 import QtQuick 2.1
 
 Item {
+    property bool local_enable: false
     id: pageMotor
-    Rectangle
-    {
-        property bool flip_: false
-        id: butt1
-        width: 20
-        height: 30
-        x : 100
-        y: 100
-        color : flip ? "pink" : "black"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: butt1.flip=!butt1.flip
+    GlobalConsts {id: appsGlobalConsts}
+
+    Row{
+        spacing: 4
+        Image {
+             source: "images/rpmgauge.svg"
+             height: appsGlobalConsts.globalHeight
+             width: appsGlobalConsts.mainGaugeWidth
+        }
+
+
+        Grid {
+            columns: 2
+            spacing: 4
+            Rectangle { color: "red"; width: 230; height: 230 }
+            Rectangle { color: "yellow"; width: 230; height: 230 }
+            Rectangle { color: "green"; width: 230; height: 230 }
+            Rectangle { color: "blue"; width: 230; height: 230 }
+            Rectangle { color: "white"; width: 230; height: 230 }
+            Rectangle { color: "pink"; width: 230; height: 230 }
 
         }
-        Text {
-            x : 200
-            y: 100
-            text: "this is page Motor"
-        }
+
     }
 }

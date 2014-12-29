@@ -1,25 +1,29 @@
 import QtQuick 2.1
-
+import "."
 Item {
-    id: pageSailing
-    Rectangle
-    {
-        property bool flip: false
-        id: butt1
-        width: 20
-        height: 30
-        x : 100
-        y: 100
-        color : flip ? "pink" : "black"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: butt1.flip=!butt1.flip
+    property bool local_enable: false
+    id: pageSailing    
+    GlobalConsts {id: appsGlobalConsts}
+
+    Row{
+        spacing: 4
+        Image {
+             source: "images/windgauge.svg"
+             height: appsGlobalConsts.globalHeight
+             width: appsGlobalConsts.mainGaugeWidth
+        }
+
+        Grid {
+            columns: 2
+            spacing: 4
+            DisplayElement { idAcronym: "HDG"; value: 75.2 }
+            DisplayElement { idAcronym: "SPD"; value: 4.2 }
+            DisplayElement { idAcronym: "COG"; value: 73.2 }
+            DisplayElement { idAcronym: "TWA"; value: 56.7 }
+            DisplayElement { idAcronym: "TWS"; value: 5.2 }
+            DisplayElement { idAcronym: "TRP"; value: 23.2 }
 
         }
-        Text {
-            x : 200
-            y: 100
-            text: "this is page Sailing"
-        }
+
     }
 }

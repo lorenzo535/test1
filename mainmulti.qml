@@ -2,17 +2,23 @@ import QtQuick 2.1
 import QtQuick.Window 2.0
 import "."
 
-Window {
-    visible: true
-    width: 480
-    height: 640
 
+Window {
+    id: mainWindow
+     GlobalConsts {id: appsGlobalConsts}
+    property int mainWindowWidth : appsGlobalConsts.globalWidth
+    property int mainWindowHeight:  appsGlobalConsts.globalHeight
+    visible: true
+    width: mainWindowWidth
+    height: mainWindowHeight
+
+     //import colors
+    Colors {id: appColors}
 
 Rectangle {
     id: container
-    width: 480
-    height: 640
-    //rotation: 90
+    width: mainWindow.width
+    height: mainWindow.height
     anchors.centerIn: parent
     property int currentScreen: 0
     property int previousScreen: 0
@@ -22,23 +28,23 @@ Rectangle {
     Screen {
             parent: container
             id: firstScreen
-            title:"First Screen"
-            color: "blue"
-            PageSail{}
+            title:""
+            color: appColors.nightBackground
+            PageSail{local_enable: parent.controls_enabled}
         },
         Screen {
             parent: container
             id: secondScreen
             title:"Second Screen"
             color: "red"
-            PageMotor{}
+            PageMotor{local_enable: parent.controls_enabled}
         },
         Screen {
             parent: container
             id:thirdScreen
             title:"Third Screen"
             color:"green"
-            PageDIO{}
+            PageDIO{local_enable: parent.controls_enabled}            
         },
         Screen {
             parent: container
@@ -46,7 +52,7 @@ Rectangle {
             id:fourthScreen
             title:"Fourth Screen"
             color:"orange"
-            PageInfos{}
+            PageInfos{local_enable: parent.controls_enabled}
         }
         ]
 

@@ -1,25 +1,31 @@
 import QtQuick 2.1
 
+import "."
+
 Item {
     id: screen
     property string color: "red"    
     property string title: "title"
+    property bool controls_enabled: false
     opacity: 1    
 
     function hide() {
         screen.state = 'hide';
         screen.x = 0;
+        controls_enabled = false;
     }
 
     function show(xVal) {        
         screen.x = xVal;        
         screen.state  = 'show';
+        controls_enabled = true;
     }
 
     Rectangle {
         id: rect
-        width: 480
-        height: 640
+        width: container.width
+        height: container.height
+        //anchors.centerIn: screen
         color:  screen.color
     }
 

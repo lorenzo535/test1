@@ -1,6 +1,7 @@
 import QtQuick 2.1
 
 Item {
+    property bool local_enable: false
     id: pageDIO
     Rectangle
     {
@@ -14,6 +15,7 @@ Item {
         MouseArea {
             anchors.fill: parent
             onClicked: butt1.flip=!butt1.flip
+            enabled: local_enable
 
         }
         Text {

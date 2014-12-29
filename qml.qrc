@@ -1,11 +1,17 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
         <file>mainmulti.qml</file>
         <file>Screen.qml</file>
         <file>PageSail.qml</file>
         <file>PageMotor.qml</file>
         <file>PageInfos.qml</file>
         <file>PageDIO.qml</file>
+        <file>DisplayElement.qml</file>
+        <file>Colors.qml</file>
+        <file>images/knob.svg</file>
+        <file>images/arm.svg</file>
+        <file>images/windgauge.svg</file>
+        <file>images/rpmgauge.svg</file>
+        <file>GlobalConsts.qml</file>
     </qresource>
 </RCC>
