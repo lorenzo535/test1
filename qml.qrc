@@ -14,5 +14,6 @@
         <file>images/rpmgauge.svg</file>
         <file>GlobalConsts.qml</file>
         <file>WindInstrument.qml</file>
+        <file>RpmInstrument.qml</file>
     </qresource>
 </RCC>

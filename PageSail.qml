@@ -5,13 +5,11 @@ Item {
     id: pageSailing    
     GlobalConsts {id: appsGlobalConsts}
 
-    Row{
-        spacing: 4
-        Image {
-             source: "images/windgauge.svg"
-             height: appsGlobalConsts.globalHeight
-             width: appsGlobalConsts.mainGaugeWidth
-        }
+    Row
+    {
+        spacing: 2
+
+        WindInstrument {id: theWindInstrument }
 
         Grid {
             columns: 2
@@ -24,6 +22,7 @@ Item {
             DisplayElement { idAcronym: "TRP"; value: 23.2 }
 
         }
-
     }
+
+
 }

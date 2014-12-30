@@ -1,5 +1,5 @@
 import QtQuick 2.1
-
+import "."
 Item {
     property bool local_enable: false
     id: pageMotor
@@ -7,12 +7,8 @@ Item {
 
     Row{
         spacing: 4
-        Image {
-             source: "images/rpmgauge.svg"
-             height: appsGlobalConsts.globalHeight
-             width: appsGlobalConsts.mainGaugeWidth
-        }
 
+        RpmInstrument {}
 
         Grid {
             columns: 2
