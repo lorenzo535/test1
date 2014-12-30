@@ -13,5 +13,6 @@
         <file>images/windgauge.svg</file>
         <file>images/rpmgauge.svg</file>
         <file>GlobalConsts.qml</file>
+        <file>WindInstrument.qml</file>
     </qresource>
 </RCC>
